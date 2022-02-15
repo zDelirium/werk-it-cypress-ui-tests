@@ -32,4 +32,15 @@ describe('Testing the signup', () => {
         .get('[type="submit"]')
         .click()
     })
+
+    it('Testing signup submit with empty input fields', () => {
+        cy.get('.mx-lg-3')
+        .click()
+        .get('[type="submit"]')
+        .click()
+        .wait(1000)
+        // It should stay at the same page when you submit 
+        // with empty imput fields
+        .url().should('include', '/registe')
+    })
 });
