@@ -16,7 +16,7 @@ describe('Testing Sign Up', () => {
 
     // finds element and type information into feild
     cy.get('[name = "firstName"]').type('Fidel')
-    //.should('have.value', 'fake@email.com')
+  
 
     cy.get('[name = "lastName"]').type('Nap')
 
