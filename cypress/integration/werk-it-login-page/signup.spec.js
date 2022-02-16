@@ -13,7 +13,7 @@ describe('Testing Sign Up', () => {
 
   })
   it('Enters Sign up information', () => {
-
+    cy.get('.mx-lg-3').click()
     // finds element and type information into feild
     cy.get('[name = "firstName"]').type('Fidel')
   
