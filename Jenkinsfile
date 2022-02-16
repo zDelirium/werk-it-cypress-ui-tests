@@ -7,14 +7,20 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            checkout scm
+            steps {
+                checkout scm
+            }
         }
         stage('Dependencies') {
-            sh 'npm install'
+            steps {
+                sh 'npm install'
+            }
         }
         stage('Test') {
-            sh 'npm start & wait-on https://staging.tiered-planet.net/werk-it-back-end'
-            sh '$(npm bin)/ cypress run'
+            steps {
+                sh 'npm start & wait-on https://staging.tiered-planet.net/werk-it-back-end'
+                sh '$(npm bin)/ cypress run'
+            }
         }
     }
 }
