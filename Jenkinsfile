@@ -27,6 +27,7 @@ pipeline {
         */
         stage('Build & Test') {
             steps {
+                sh 'sudo chown -R 112:116 "/.npm"'
                 sh 'npm ci'
                 sh 'npm run test'
             }
