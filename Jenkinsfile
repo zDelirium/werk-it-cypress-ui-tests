@@ -18,8 +18,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'chmod 0777 ./node_modules/.bin/'
-                sh '$(npm bin)/ cypress run'
+                sh 'chmod 0777 ./node_modules/.bin/cypress'
+                sh '$(npm bin)/cypress run'
             }
         }
     }
