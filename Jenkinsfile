@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm start & wait-on https://staging.tiered-planet.net/werk-it-back-end'
+                sh 'npm start'
                 sh '$(npm bin)/ cypress run'
             }
         }
