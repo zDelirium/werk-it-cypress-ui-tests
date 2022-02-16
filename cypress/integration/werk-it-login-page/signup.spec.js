@@ -33,7 +33,7 @@ describe('Testing the signup', () => {
         .click()
     })
 
-    it('Testing signup submit with empty input fields', () => {
+    it.skip('Testing signup submit with empty input fields', () => {
         cy.get('a[class=\'mt-2 mx-lg-3 btn btn-outline-success\']')
         .click()
         .get('[type="submit"]')
