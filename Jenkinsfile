@@ -25,6 +25,7 @@ pipeline {
         */
         stage('Test') {
             steps {
+                sh 'cypress install'
                 sh 'chmod 0777 ./node_modules/.bin/cypress'
                 sh '$(npm bin)/cypress run'
             }
