@@ -15,11 +15,14 @@ pipeline {
                 checkout scm
             }
         }
+        /*
         stage('Dependencies') {
             steps {
+                sh 'sudo chown -R 112:116 \"/.npm\" '
                 sh 'npm install'
             }
         }
+        */
         stage('Test') {
             steps {
                 sh 'chmod 0777 ./node_modules/.bin/cypress'
