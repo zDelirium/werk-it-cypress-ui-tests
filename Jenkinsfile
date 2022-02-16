@@ -5,9 +5,11 @@ pipeline {
         }
     }
 
+    /*
     tools {
         nodejs "NodeJS17.4.0"
     }
+    */
 
     stages {
         stage('Checkout') {
@@ -23,11 +25,10 @@ pipeline {
             }
         }
         */
-        stage('Test') {
+        stage('Build & Test') {
             steps {
-                sh 'cypress install'
-                sh 'chmod 0777 ./node_modules/.bin/cypress'
-                sh '$(npm bin)/cypress run'
+                sh 'npm ci'
+                sh 'npm run test'
             }
         }
     }
