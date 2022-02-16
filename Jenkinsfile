@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'npm start'
                 sh '$(npm bin)/ cypress run'
             }
         }
